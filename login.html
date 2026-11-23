@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f7f5ff">
+  <title>Log in — Learnova AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="auth.js" defer></script>
+</head>
+<body class="auth-page" data-auth-page="login">
+  <main class="auth-layout">
+    <a class="brand auth-brand" href="index.html"><span class="brand-mark" aria-hidden="true">✦</span><span>learnova<span class="brand-ai">.ai</span></span></a>
+    <section class="auth-card">
+      <div class="auth-illustration" aria-hidden="true">📚</div>
+      <p class="eyebrow">YOUR STUDY SPACE IS WAITING</p>
+      <h1>Welcome back.</h1>
+      <p class="auth-intro">Log in and pick up right where you left off.</p>
+      <form class="auth-form" id="loginForm" novalidate>
+        <label for="loginIdentifier">Student name or email</label>
+        <input id="loginIdentifier" name="identifier" type="text" autocomplete="username" required maxlength="254" placeholder="Your name or student@email.com">
+        <label for="loginPassword">Password</label>
+        <div class="password-field"><input id="loginPassword" name="password" type="password" autocomplete="current-password" required maxlength="200" placeholder="Your password"><button class="password-toggle" type="button" data-password-toggle="loginPassword" aria-label="Show password" aria-pressed="false">Show</button></div>
+        <div class="auth-form-row"><label class="checkbox-label"><input id="rememberMe" type="checkbox"> Remember me on this device</label><a href="forgot-password.html">Forgot password?</a></div>
+        <p class="auth-message" id="authMessage" role="alert" hidden></p>
+        <button class="button button-primary auth-submit" id="loginButton" type="submit">Log in <span aria-hidden="true">→</span></button>
+      </form>
+      <p class="auth-switch">New to Learnova? <a href="signup.html">Create a student account</a></p>
+      <a class="auth-home-link" href="index.html">← Back to Learnova</a>
+    </section>
+    <p class="auth-footnote">Your password is protected and never stored in your browser.</p>
+  </main>
+</body>
+</html>

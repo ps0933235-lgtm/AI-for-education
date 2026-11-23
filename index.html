@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f7f5ff">
+  <meta name="description" content="Learnova AI is your personal learning space for explanations, quizzes, notes, study plans and progress.">
+  <title>Learnova AI — Make learning click</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="#home" aria-label="Learnova AI home">
+        <span class="brand-mark" aria-hidden="true">✦</span>
+        <span>learnova<span class="brand-ai">.ai</span></span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="primaryNav" aria-label="Open navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="primary-nav" id="primaryNav" aria-label="Main navigation">
+        <a href="#dashboard">Dashboard</a>
+        <a href="#tutor">AI tutor</a>
+        <a href="#quiz">Quiz</a>
+        <a href="#flashcards">Flashcards</a>
+        <a href="#notes">Notes</a>
+        <a href="#planner">Study planner</a>
+        <a href="#about">About</a>
+      </nav>
+      <div class="header-actions">
+        <span class="header-student" id="headerStudentName"></span>
+        <a class="nav-cta" id="accountLink" href="login.html">Log in <span aria-hidden="true">↗</span></a>
+        <a class="nav-cta" id="dashboardLink" href="dashboard.html" hidden>My dashboard <span aria-hidden="true">↗</span></a>
+        <button class="icon-button" id="themeToggle" type="button" aria-label="Switch to dark mode" title="Change theme">☾</button>
+        <button class="button button-outline logout-button" id="logoutButton" type="button" hidden>Log out</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero section-shell" id="home">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="sparkle">✦</span> YOUR PERSONAL AI STUDY SPACE</div>
+        <h1>Make learning<br>feel like <span class="gradient-text">your thing.</span></h1>
+        <p class="hero-description">Big ideas, made simple. Get a little help understanding tricky topics, practice at your pace, and see how far you’ve come.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#tutor">Meet your AI tutor <span aria-hidden="true">→</span></a>
+          <a class="button button-quiet" href="#dashboard"><span class="play-icon" aria-hidden="true">▶</span> Explore dashboard</a>
+        </div>
+        <form class="site-search" id="siteSearch" role="search">
+          <label class="sr-only" for="siteSearchInput">Search Learnova tools</label>
+          <input id="siteSearchInput" type="search" placeholder="What do you want to study today?" autocomplete="off">
+          <button class="button button-primary" type="submit">Find it <span aria-hidden="true">→</span></button>
+          <p id="siteSearchMessage" role="status" aria-live="polite"></p>
+        </form>
+        <div class="hero-proof">
+          <div class="avatar-stack" aria-hidden="true"><span>👩🏽‍🎓</span><span>👨🏻‍🎓</span><span>👩🏼‍🎓</span></div>
+          <p><strong>A calmer way to study</strong><br><span>Built for curious minds, everywhere.</span></p>
+        </div>
+      </div>
+      <div class="hero-art" aria-label="Illustration of a student learning with Learnova">
+        <div class="art-glow"></div>
+        <div class="floating-note note-top"><span class="note-icon">✦</span><span><strong>Small steps.</strong><br>Big progress.</span></div>
+        <div class="study-window">
+          <div class="window-head"><span class="window-dot"></span><span class="window-dot"></span><span class="window-dot"></span><span class="window-label">YOUR STUDY SPACE</span></div>
+          <div class="window-body">
+            <div class="mini-greeting"><div class="mini-avatar">😊</div><div><span class="muted-small">MONDAY, 12 MAY</span><h3>Hey, learner!</h3></div></div>
+            <div class="mini-progress"><div class="progress-label"><span>Weekly goal</span><strong>3 of 5 days</strong></div><div class="mini-track"><i></i></div></div>
+            <div class="mini-cards"><div class="mini-card lavender"><span>🧠</span><small>Understand</small><strong>Ask a tutor</strong></div><div class="mini-card peach"><span>⚡</span><small>Practice</small><strong>Take a quiz</strong></div></div>
+            <div class="mini-tip"><span>💡</span><span>One focused session beats an all-nighter.</span></div>
+          </div>
+        </div>
+        <div class="floating-note note-bottom"><span class="streak-icon">🔥</span><span><strong>You showed up.</strong><br>That’s what counts.</span></div>
+        <span class="art-spark art-spark-one" aria-hidden="true">✦</span><span class="art-spark art-spark-two" aria-hidden="true">✧</span>
+      </div>
+    </section>
+
+    <section class="trust-strip" aria-label="Learnova features">
+      <p>YOUR LEARNING, ALL IN ONE PLACE</p>
+      <div><span>✦</span> Explanations that click <span class="strip-dot">·</span> Practice that sticks <span class="strip-dot">·</span> Progress you can feel</div>
+    </section>
+
+    <section class="dashboard-section section-shell section-space" id="dashboard">
+      <div class="section-heading heading-row">
+        <div><div class="eyebrow">YOUR LITTLE CORNER OF THE INTERNET</div><h2 id="dashboardGreeting">Welcome to your <span class="gradient-text">learning space.</span></h2><p id="dashboardSubheading">Pick up where you left off, or choose what you need today.</p></div>
+        <div class="date-pill"><span aria-hidden="true">☀</span> A fresh start, any day</div>
+      </div>
+      <div class="stats-grid">
+        <article class="stat-card"><div class="stat-icon icon-lilac">✦</div><div><p>Quizzes completed</p><strong id="quizCount">0</strong><span>Every try makes you sharper</span></div></article>
+        <article class="stat-card"><div class="stat-icon icon-blue">◎</div><div><p>Average quiz score</p><strong><span id="averageScore">0</span><small>%</small></strong><span>Progress, not perfection</span></div></article>
+        <article class="stat-card"><div class="stat-icon icon-lilac">✎</div><div><p>Total marks earned</p><strong id="totalMarks">0</strong><span id="totalMarksMeta">Across 0 questions</span></div></article>
+        <article class="stat-card"><div class="stat-icon icon-peach">✓</div><div><p>Tasks completed</p><strong id="taskCount">0</strong><span>Look at you showing up</span></div></article>
+      </div>
+      <div class="section-heading tool-heading"><div><div class="eyebrow">YOUR TOOLKIT</div><h2>What would help <span class="gradient-text">right now?</span></h2></div></div>
+      <div class="tool-grid">
+        <a class="tool-card tool-tutor" href="#tutor"><span class="tool-emoji">🪄</span><span class="tool-tag">UNDERSTAND</span><h3>Ask your AI tutor</h3><p>Turn a tricky topic into a simple, friendly explanation.</p><span class="tool-link">Get an explanation <b>↗</b></span></a>
+        <a class="tool-card tool-quiz" href="#quiz"><span class="tool-emoji">🧩</span><span class="tool-tag">PRACTICE</span><h3>Make a quick quiz</h3><p>Test what you know with practice questions made for you.</p><span class="tool-link">Build a quiz <b>↗</b></span></a>
+        <a class="tool-card tool-notes" href="#notes"><span class="tool-emoji">📝</span><span class="tool-tag">GET ORGANISED</span><h3>Create your notes</h3><p>Get a clear, skimmable topic summary to study from.</p><span class="tool-link">Make some notes <b>↗</b></span></a>
+        <a class="tool-card tool-planner" href="#planner"><span class="tool-emoji">🗓️</span><span class="tool-tag">MAKE A PLAN</span><h3>Plan a study session</h3><p>Break your study goals into small, doable next steps.</p><span class="tool-link">Plan your week <b>↗</b></span></a>
+      </div>
+    </section>
+
+    <section class="feature-section" id="tutor">
+      <div class="feature-layout section-shell">
+        <div class="feature-copy"><div class="eyebrow">01 — YOUR PATIENT STUDY BUDDY</div><h2>Confusing today.<br><span class="gradient-text">Clear in a minute.</span></h2><p>Ask any subject question, choose how you learn best, and keep the conversation going with a follow-up.</p><div class="feature-checks"><span>✓ Ask about any subject</span><span>✓ Choose your level and language</span><span>✓ Follow up without starting over</span></div><p class="demo-disclaimer"><span aria-hidden="true">ⓘ</span> AI-generated answers come from your configured server-side model. Check important facts with your course materials.</p></div>
+        <div class="panel tutor-panel">
+          <div class="panel-title"><span class="panel-title-icon">✨</span><div><h3>Your AI personal tutor</h3><p>Let’s figure it out together.</p></div><span class="demo-badge live-badge">LIVE AI</span></div>
+          <form id="tutorForm" class="form-stack" novalidate>
+            <label for="tutorTopic">What are you learning about?</label>
+            <input id="tutorTopic" name="topic" type="text" placeholder="e.g. Photosynthesis, fractions…" required maxlength="100" aria-describedby="tutorInputHint">
+            <small class="tutor-input-hint" id="tutorInputHint">Ask about a concept, homework question, or exam topic.</small>
+            <label for="tutorIntent">How should I help?</label>
+            <select id="tutorIntent">
+              <option value="simple">Explain this topic simply</option><option value="eli10">Explain like I’m 10</option>
+              <option value="example">Give me an example</option><option value="steps">Explain step by step</option>
+              <option value="importance">Why is this important?</option><option value="real-life">Give me a real-life example</option>
+              <option value="difference">Explain the difference</option><option value="exams">Help me prepare for exams</option>
+              <option value="ask-me">Ask me questions about this topic</option>
+            </select>
+            <div class="select-row">
+              <div><label for="tutorLevel">Learning level</label><select id="tutorLevel"><option value="beginner">Beginner</option><option value="intermediate">Intermediate</option><option value="advanced">Advanced</option></select></div>
+              <div><label for="tutorLanguage">Language</label><select id="tutorLanguage"><option value="english">English</option><option value="hindi">Hindi</option><option value="hinglish">Hinglish</option></select></div>
+            </div>
+            <div class="button-row"><button class="button button-primary" id="tutorSubmit" type="submit">Ask AI <span aria-hidden="true">→</span></button><button class="button button-outline" id="clearTutor" type="button">Clear</button></div>
+          </form>
+          <div class="response-box" id="tutorResponse" aria-live="polite" aria-atomic="true" aria-busy="false"><div class="response-placeholder"><span>💬</span><p>Your explanation will show up here.<br><small>Ask about anything you’re learning.</small></p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="quiz-section section-shell section-space" id="quiz">
+      <div class="section-heading heading-row"><div><div class="eyebrow">02 — PRACTICE WITHOUT THE PRESSURE</div><h2>Let’s make it <span class="gradient-text">make sense.</span></h2><p>A few good questions can show you what you already know—and what to revisit.</p></div><div class="section-doodle" aria-hidden="true">✳</div></div>
+      <div class="quiz-layout">
+        <div class="panel quiz-setup">
+          <div class="panel-title"><span class="panel-title-icon quiz-icon">🧩</span><div><h3>Quiz generator</h3><p>Your next little challenge.</p></div><span class="demo-badge live-badge">LIVE AI</span></div>
+          <form id="quizForm" class="form-stack">
+            <label for="quizSubject">Choose a subject</label><select id="quizSubject"><option>Biology</option><option>Physics</option><option>Chemistry</option><option>Mathematics</option><option>Computer Science</option><option>History</option><option>Economics</option><option>Other</option></select>
+            <div id="customSubjectField" hidden><label for="customQuizSubject">Your subject</label><input id="customQuizSubject" type="text" placeholder="Type a subject" maxlength="80"></div>
+            <label for="quizTopic">Topic</label><input id="quizTopic" type="text" placeholder="e.g. The water cycle" required maxlength="100">
+            <label for="quizLevel">Choose a level</label><select id="quizLevel"><option value="easy">Easy</option><option value="medium">Medium</option><option value="hard">Hard</option></select>
+            <label for="questionCount">How many questions?</label><select id="questionCount"><option value="5">5 questions · quick practice</option><option value="10">10 questions · go deeper</option></select>
+            <button class="button button-primary button-full" id="startQuizButton" type="submit">Start quiz <span aria-hidden="true">→</span></button>
+          </form>
+          <p class="demo-disclaimer"><span aria-hidden="true">ⓘ</span> Questions and explanations are generated by the configured AI model.</p>
+        </div>
+        <div class="panel quiz-workspace" id="quizWorkspace" aria-live="polite">
+          <div class="empty-state"><div class="empty-illustration">✍️</div><h3>Your quiz will live here</h3><p>Add a subject and topic to get started. Take your time—this is your space.</p><div class="empty-dots"><i></i><i></i><i></i></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="notes-section" id="notes">
+      <div class="notes-layout section-shell">
+        <div class="notes-intro"><div class="eyebrow">03 — LESS SCRAMBLING, MORE LEARNING</div><h2>Notes you’ll actually <span class="gradient-text">want to read.</span></h2><p>Generate structured, easy-to-review notes with definitions, examples, key terms, exam questions, and a short summary.</p><div class="notes-sticker">✨ <span>Your future self says thanks.</span></div></div>
+        <div class="panel notes-panel">
+          <div class="panel-title"><span class="panel-title-icon notes-icon">📝</span><div><h3>Notes generator</h3><p>Clear, concise, and all yours.</p></div><span class="demo-badge live-badge">LIVE AI</span></div>
+          <form id="notesForm" class="notes-form" novalidate>
+            <label for="notesTopic">What topic, subject, or chapter are you studying?</label>
+            <div class="notes-topic-row"><input id="notesTopic" type="text" placeholder="e.g. The solar system" required maxlength="180"><button class="button button-primary" id="generateNotes" type="submit">Make my notes <span aria-hidden="true">→</span></button></div>
+            <div class="notes-options">
+              <div><label for="notesLanguage">Language</label><select id="notesLanguage"><option value="english">English</option><option value="hindi">Hindi</option><option value="hinglish">Hinglish</option></select></div>
+              <div><label for="notesLevel">Level</label><select id="notesLevel"><option value="beginner">Beginner</option><option value="intermediate">Intermediate</option><option value="advanced">Advanced</option></select></div>
+              <div><label for="notesType">Notes type</label><select id="notesType"><option value="short">Short Notes</option><option value="detailed">Detailed Notes</option><option value="exam">Exam Notes</option></select></div>
+              <div><label for="notesExplanation">Explanation</label><select id="notesExplanation"><option value="very-easy">Very Easy</option><option value="step-by-step">Step-by-Step</option></select></div>
+              <div><label for="notesLength">Length</label><select id="notesLength"><option value="one-page">1-page</option><option value="two-page">2-page</option><option value="detailed">Detailed</option></select></div>
+            </div>
+            <p class="notes-form-error" id="notesFormError" role="alert" hidden></p>
+          </form>
+          <div id="notesOutput" class="notes-output" aria-live="polite" aria-busy="false"><div class="response-placeholder"><span>📚</span><p>Your study notes will show up here.<br><small>Enter a topic to generate structured notes.</small></p></div></div>
+          <div class="notes-footer"><span class="notes-demo-note">ⓘ Uses the configured server-side AI. Your API key stays on the server.</span><div class="notes-actions"><button class="button button-outline copy-button" id="regenerateNotes" type="button" disabled>↻ Try again</button><button class="button button-outline copy-button" id="copyNotes" type="button" disabled>▢ Copy notes</button><button class="button button-outline copy-button" id="downloadNotesPDF" type="button" disabled>↓ Download PDF</button></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="flashcards-section section-shell section-space" id="flashcards">
+      <div class="section-heading heading-row"><div><div class="eyebrow">04 — LEARN & REMEMBER</div><h2>Little cards, <span class="gradient-text">big recall.</span></h2><p>Make a set of useful question-and-answer cards and flip through them at your pace.</p></div><div class="flashcard-doodle" aria-hidden="true">▤</div></div>
+      <div class="flashcards-layout">
+        <form class="panel flashcard-setup form-stack" id="flashcardForm">
+          <div class="panel-title"><span class="panel-title-icon flashcard-icon">🗂️</span><div><h3>Make study flashcards</h3><p>Built around the topic you choose.</p></div></div>
+          <label for="flashcardTopic">What topic are you studying?</label><input id="flashcardTopic" type="text" placeholder="e.g. Cell biology" required maxlength="180">
+          <div class="select-row"><div><label for="flashcardLevel">Level</label><select id="flashcardLevel"><option value="beginner">Beginner</option><option value="intermediate">Intermediate</option><option value="advanced">Advanced</option></select></div><div><label for="flashcardLanguage">Language</label><select id="flashcardLanguage"><option value="english">English</option><option value="hindi">Hindi</option><option value="hinglish">Hinglish</option></select></div></div>
+          <button class="button button-primary" id="makeFlashcards" type="submit">Make my flashcards <span aria-hidden="true">→</span></button>
+          <p class="flashcard-error" id="flashcardError" role="alert" hidden></p>
+        </form>
+        <div class="flashcard-viewer">
+          <button class="flashcard" id="flashcard" type="button" aria-label="Flip flashcard" aria-pressed="false" disabled>
+            <span class="flashcard-side-label" id="flashcardSideLabel">YOUR FIRST CARD</span><strong id="flashcardText">Your flashcards will show up here.</strong><span class="flashcard-hint">Tap or press Enter to flip</span>
+          </button>
+          <div class="flashcard-controls"><button class="button button-outline" id="previousCard" type="button" disabled>← Previous</button><span id="flashcardCounter" aria-live="polite">0 / 0</span><button class="button button-outline" id="flipCard" type="button" disabled>Flip card</button><button class="button button-primary" id="nextCard" type="button" disabled>Next card →</button></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="planner-section section-shell section-space" id="planner">
+      <div class="section-heading heading-row"><div><div class="eyebrow">05 — A PLAN THAT FITS YOUR LIFE</div><h2>One small step at a <span class="gradient-text">time.</span></h2><p>Make a simple study list. Check things off when you’re ready—no streaks or pressure required.</p></div><div class="planner-doodle" aria-hidden="true">✎</div></div>
+      <div class="planner-layout">
+        <div class="panel planner-panel">
+          <div class="panel-title"><span class="panel-title-icon planner-icon">🗓️</span><div><h3>My study planner</h3><p>A little structure, a lot more breathing room.</p></div></div>
+          <form id="taskForm" class="task-form">
+            <div class="task-field"><label for="taskSubject">Subject</label><input id="taskSubject" type="text" placeholder="e.g. Biology" required maxlength="60"></div>
+            <div class="task-field task-wide"><label for="taskName">What would you like to do?</label><input id="taskName" type="text" placeholder="e.g. Review my class notes" required maxlength="120"></div>
+            <div class="task-field"><label for="taskDate">When? <span class="optional">(optional)</span></label><input id="taskDate" type="date"></div>
+            <button class="button button-primary add-task-button" type="submit"><span aria-hidden="true">＋</span> Add to my plan</button>
+          </form>
+          <div class="task-list-head"><h4>Your study list <span id="taskTotal" class="count-pill">0</span></h4><span class="autosave-label"><i></i> Saved on this device</span></div>
+          <ul class="task-list" id="taskList"><li class="task-empty">Nothing on the list yet. Add one small step to begin 🌱</li></ul>
+        </div>
+        <aside class="planner-aside"><div class="aside-orb">🌿</div><h3>Progress is<br>made of little things.</h3><p>A finished task, a question you asked, a moment something finally clicked. It all counts.</p><a href="#progress">See your progress <span aria-hidden="true">→</span></a></aside>
+      </div>
+    </section>
+
+    <section class="progress-section" id="progress">
+      <div class="progress-layout section-shell">
+        <div class="progress-copy"><div class="eyebrow">06 — NOTICE HOW FAR YOU’VE COME</div><h2>Your progress,<br><span class="gradient-text">your way.</span></h2><p>No leaderboard, no comparison. Just a little reminder of what you’ve already done.</p><div class="progress-heart">Made with learning, not pressure <span>♡</span></div></div>
+        <div class="progress-cards">
+          <article class="progress-card"><div class="progress-card-top"><span class="progress-icon progress-icon-purple">✦</span><span class="progress-caption">QUIZ PRACTICE</span></div><h3><span id="progressQuizCount">0</span> <small>quizzes completed</small></h3><p><span id="progressScore">0</span>% average score <span class="progress-mood" id="progressMarks">0 / 0 marks earned</span></p><div class="progress-track"><span id="quizProgressBar"></span></div></article>
+          <article class="progress-card"><div class="progress-card-top"><span class="progress-icon progress-icon-blue">✓</span><span class="progress-caption">STUDY SESSIONS</span></div><h3><span id="progressTaskCount">0</span> <small>tasks completed</small></h3><p><span id="taskProgressLabel">0</span>% of your study list <span class="progress-mood">Every step counts</span></p><div class="progress-track blue-track"><span id="taskProgressBar"></span></div></article>
+          <div class="progress-footnote">Your learning history stays in this browser on this device.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section section-shell section-space" id="about">
+      <div class="about-card"><div class="about-spark" aria-hidden="true">✦</div><div class="eyebrow">A NOTE FROM LEARNOVA</div><h2>Learning should feel like<br><span class="gradient-text">an open door.</span></h2><p>Learnova is a student-friendly learning companion. Tutor questions, notes topics, quiz topics, and flashcard topics are sent to the configured AI provider through this server. Your API key stays on the server. Planner tasks and progress are saved in this browser, separately for each account; that browser data is not used for authentication.</p><a class="button button-primary" href="#tutor">Let’s get learning <span aria-hidden="true">→</span></a></div>
+      <div class="contact-card"><div class="eyebrow">SAY HELLO</div><h3>Questions, ideas, or a little feedback?</h3><p>We’d love to hear what would make learning better for you.</p><a class="contact-link" href="mailto:hello@learnova.example">hello@learnova.example <span aria-hidden="true">↗</span></a><p class="contact-small">Demo contact address for this student project.</p></div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><a class="brand footer-brand" href="#home"><span class="brand-mark" aria-hidden="true">✦</span><span>learnova<span class="brand-ai">.ai</span></span></a><p>Made for curious minds. Take it one step at a time.</p><a href="#home">Back to top ↑</a><span class="footer-copy">© <span id="currentYear"></span> Learnova AI</span></footer>
+</body>
+</html>

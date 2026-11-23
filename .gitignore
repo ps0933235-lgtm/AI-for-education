@@ -1,0 +1,6 @@
+.env
+.env.*
+!.env.example
+learnova.sqlite
+learnova.sqlite-shm
+learnova.sqlite-wal

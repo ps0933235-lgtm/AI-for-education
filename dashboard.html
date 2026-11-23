@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f7f5ff">
+  <meta name="description" content="Your personal Learnova AI student dashboard.">
+  <title>My dashboard — Learnova AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="dashboard.js" defer></script>
+</head>
+<body class="student-dashboard">
+  <header class="site-header">
+    <div class="nav-wrap dashboard-nav">
+      <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">✦</span><span>learnova<span class="brand-ai">.ai</span></span></a>
+      <div class="header-actions">
+        <button class="icon-button" id="themeToggle" type="button" aria-label="Switch to dark mode" title="Change theme">☾</button>
+        <button class="button button-outline logout-button" id="logoutButton" type="button">Log out</button>
+      </div>
+    </div>
+  </header>
+  <main class="dashboard-main section-shell">
+    <section class="dashboard-welcome">
+      <div><p class="eyebrow">YOUR PROGRESS, YOUR WAY</p><h1 id="dashboardWelcome">Welcome back!</h1><p>Every question, note, and small study session adds up.</p></div>
+      <a class="button button-primary" id="continueLearning" href="index.html#tutor">Continue learning <span aria-hidden="true">→</span></a>
+    </section>
+    <section class="dashboard-stats" aria-label="Your learning at a glance">
+      <article class="dashboard-stat"><span class="dashboard-stat-icon icon-lilac">✦</span><p>Topics learned</p><strong id="dashTopics">0</strong><small>Unique topics you explored</small></article>
+      <article class="dashboard-stat"><span class="dashboard-stat-icon icon-peach">📝</span><p>Notes made</p><strong id="dashNotes">0</strong><small>Your study guides, made easy</small></article>
+      <article class="dashboard-stat"><span class="dashboard-stat-icon icon-blue">🧩</span><p>Quizzes tried</p><strong id="dashQuizzes">0</strong><small>Practice builds confidence</small></article>
+      <article class="dashboard-stat"><span class="dashboard-stat-icon icon-green">✓</span><p>Study tasks done</p><strong id="dashTasks">0</strong><small>One step at a time</small></article>
+    </section>
+    <section class="dashboard-progress-grid">
+      <article class="panel dashboard-progress-card"><div class="panel-title"><span class="panel-title-icon quiz-icon">🏆</span><div><h2>Quiz scores</h2><p id="dashScoreText">No quizzes yet. Your first try is waiting.</p></div></div><div class="progress-track"><span id="dashScoreBar"></span></div></article>
+      <article class="panel dashboard-progress-card"><div class="panel-title"><span class="panel-title-icon planner-icon">🌱</span><div><h2>Study plan</h2><p id="dashTaskText">Add a small task when you’re ready.</p></div></div><div class="progress-track blue-track"><span id="dashTaskBar"></span></div></article>
+    </section>
+    <section class="dashboard-bottom-grid">
+      <article class="panel recent-activity-panel"><div class="dashboard-section-title"><div><p class="eyebrow">LITTLE WINS</p><h2>Recent activity</h2></div><a href="index.html#progress">See my progress ↗</a></div><ul id="recentActivities" class="recent-activities"><li class="activity-empty">Your learning journey will show up here.</li></ul></article>
+      <aside class="dashboard-continue"><div class="aside-orb">💜</div><h2>What would help today?</h2><p>Choose your next little step. No pressure, just progress.</p><a href="index.html#tutor">Ask your AI tutor <span>→</span></a><a href="index.html#notes">Make easy notes <span>→</span></a><a href="index.html#quiz">Try a quiz <span>→</span></a><a href="index.html#flashcards">Study with flashcards <span>→</span></a></aside>
+    </section>
+  </main>
+  <footer class="site-footer"><a class="brand footer-brand" href="index.html"><span class="brand-mark" aria-hidden="true">✦</span><span>learnova<span class="brand-ai">.ai</span></span></a><p>Made for curious minds. Take it one step at a time.</p><a href="index.html">Back to learning ↑</a><span class="footer-copy">© <span id="currentYear"></span> Learnova AI</span></footer>
+</body>
+</html>
